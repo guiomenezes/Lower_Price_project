@@ -83,23 +83,23 @@ def buscar():
 
 janela = customtkinter.CTk()
 
-janela.title('Site mais barato')
+janela.title('Lower Price')
 janela.grid_anchor('center')
 janela.geometry('300x300')
 
 font_1 = customtkinter.CTkFont(family='Arial', weight='bold', size=18)
 font_2 = customtkinter.CTkFont(family='Arial', slant='italic', size=14)
 
-label_1 = customtkinter.CTkLabel(janela, text='Produto', font=font_1)
+label_1 = customtkinter.CTkLabel(janela, text='Product', font=font_1)
 label_1.grid(row=0, column=0, padx=10, pady=0)
 
 text_box = customtkinter.CTkEntry(janela, width=180, height=25)
 text_box.grid(row=1, column=0, padx=10, pady=0)
 
-buscar_button = customtkinter.CTkButton(janela, text='Buscar', width=180, height=25, command=buscar)
+buscar_button = customtkinter.CTkButton(janela, text='Search', width=180, height=25, command=buscar)
 buscar_button.grid(row=2, column=0, padx=10, pady=10)
 
-label_2 = customtkinter.CTkLabel(janela, text='Resultado', font=font_2)
+label_2 = customtkinter.CTkLabel(janela, text='Result:', font=font_2)
 label_2.grid(row=3, column=0, padx=0, pady=0)
 
 text_box_outcome = customtkinter.CTkTextbox(janela, width=230, height=100)
