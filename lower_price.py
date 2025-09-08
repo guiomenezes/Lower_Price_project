@@ -61,7 +61,7 @@ def second_site(driver, wait, prod):
 
     return price
 
-def buscar():
+def search():
     nome_prod = text_box.get()
 
     driver, wait = start_driver()
@@ -81,31 +81,28 @@ def buscar():
 
     driver.quit()
 
-janela = customtkinter.CTk()
+main_window = customtkinter.CTk()
 
-janela.title('Lower Price')
-janela.grid_anchor('center')
-janela.geometry('300x300')
+main_window.title('Lower Price')
+main_window.grid_anchor('center')
+main_window.geometry('300x300')
 
 font_1 = customtkinter.CTkFont(family='Arial', weight='bold', size=18)
 font_2 = customtkinter.CTkFont(family='Arial', slant='italic', size=14)
 
-label_1 = customtkinter.CTkLabel(janela, text='Product', font=font_1)
+label_1 = customtkinter.CTkLabel(main_window, text='Product', font=font_1)
 label_1.grid(row=0, column=0, padx=10, pady=0)
 
-text_box = customtkinter.CTkEntry(janela, width=180, height=25)
+text_box = customtkinter.CTkEntry(main_window, width=180, height=25)
 text_box.grid(row=1, column=0, padx=10, pady=0)
 
-buscar_button = customtkinter.CTkButton(janela, text='Search', width=180, height=25, command=buscar)
+buscar_button = customtkinter.CTkButton(main_window, text='Search', width=180, height=25, command=search)
 buscar_button.grid(row=2, column=0, padx=10, pady=10)
 
-label_2 = customtkinter.CTkLabel(janela, text='Result:', font=font_2)
+label_2 = customtkinter.CTkLabel(main_window, text='Result:', font=font_2)
 label_2.grid(row=3, column=0, padx=0, pady=0)
 
-text_box_outcome = customtkinter.CTkTextbox(janela, width=230, height=100)
+text_box_outcome = customtkinter.CTkTextbox(main_window, width=230, height=100)
 text_box_outcome.grid(row=4, column=0, padx=0, pady=10)
 
-janela.mainloop()
-
-
-
+main_window.mainloop()
